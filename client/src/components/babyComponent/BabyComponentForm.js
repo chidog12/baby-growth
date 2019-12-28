@@ -79,7 +79,7 @@ class BabyComponentForm extends Component {
 
             <form onSubmit={this.onSubmit}>
                 <div>
-                <TextField id="standard-basic" label="Name" 
+                <TextField id="outlined-basic" variant="outlined"label="Name" 
                     onChange={this.onChange}
                     value={this.state.name}
                     id="name"
@@ -87,7 +87,7 @@ class BabyComponentForm extends Component {
                     style = {{width: 500, paddingBottom: 10}}
                 />
                 </div><div>
-                <TextField id="standard-basic" label="age in months" 
+                <TextField id="outlined-basic" variant="outlined" label="age in months" 
                     onChange={this.onChange}
                     value={this.state.age}
                     id="age"
@@ -96,7 +96,7 @@ class BabyComponentForm extends Component {
                 />
                 </div>
                 <div>
-                <TextField id="standard-basic" label="weight in lbs" 
+                <TextField id="outlined-basic" variant="outlined" label="weight in lbs" 
                     onChange={this.onChange}
                     value={this.state.weight}
                     id="weight"

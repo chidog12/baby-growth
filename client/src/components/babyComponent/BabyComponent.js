@@ -48,9 +48,9 @@ class BabyComponent extends Component {
         console.log(this.state.babies)
 
         const babies = this.state.babies && this.state.babies.map((babies) =>
-            <div className="row" key={babies._id}>
-                <div className="section">
-                    <h4><strong>Baby:</strong> {babies.name}</h4>
+            <div key={babies._id}>
+                <div style={{textAlign: 'center'}}>
+                    <h5>{babies.name} | {babies.age} months | {babies.weight} lbs</h5>
                 </div>
             </div>
         );
