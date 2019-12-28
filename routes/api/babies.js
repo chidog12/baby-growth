@@ -6,7 +6,7 @@ const passport = require("passport");
 
 const Baby = require("../../models/Baby");
 
-// @route POST api/babies/new
+// @route POST api/babies/post
 // @desc create new baby
 // @access Public
 router.post("/post", (req, res) => {
