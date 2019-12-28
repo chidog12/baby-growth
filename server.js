@@ -42,4 +42,8 @@ app.use("/api/babies", babies);
 
 const port = process.env.PORT || 5000;
 
+app.get('/', function (req, res) {
+  res.send('hello world')
+})
+
 app.listen(port, () => console.log(`Server up and running on port ${port} !`));
