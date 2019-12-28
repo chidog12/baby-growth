@@ -15,6 +15,10 @@ const AppointmentSchema = new Schema({
     type: Date,
     default: Date.now
   },
+  done: {
+    type: Boolean,
+    required: true
+  },
 });
 
 module.exports = User = mongoose.model("appointment", AppointmentSchema);

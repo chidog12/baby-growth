@@ -50,5 +50,19 @@ router.get("/get/baby/:id", (req, res) => {
         .then(babies => res.json(babies))
 });
 
+// @route UPDATE api/babies/update/{_id}
+// @desc update specific baby
+// @access Public
+router.put("/update/:id", (req, res) => {
+    
+    Baby
+        .findByIdAndUpdate(req.params.id, {
+            name: req.body.name,
+            age: req.body.age,
+            parentId: req.body.parentId,
+            weight: req.body.weight
+        })
+        .then(babies => res.json(babies))
+});
 
 module.exports = router;
