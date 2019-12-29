@@ -73,13 +73,9 @@ class BabyComponentForm extends Component {
     return (
       <div className="form">
         <Container maxWidth="sm">
-            <h2>
-                Form
-            </h2>
-
             <form onSubmit={this.onSubmit}>
                 <div>
-                <TextField id="outlined-basic" variant="outlined"label="Name" 
+                <TextField id="outlined-basic" variant="outlined"label="Baby Name" 
                     onChange={this.onChange}
                     value={this.state.name}
                     id="name"

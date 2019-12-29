@@ -7,13 +7,17 @@ const AppointmentSchema = new Schema({
     type: String,
     required: true
   },
-  BabyId: {
+  babyId: {
+    type: String,
+    required: true
+  },
+  babyName: {
     type: String,
     required: true
   },
   date: {
-    type: Date,
-    default: Date.now
+    type: String,
+    required: true
   },
   done: {
     type: Boolean,

@@ -50,6 +50,18 @@ router.get("/get/baby/:id", (req, res) => {
         .then(babies => res.json(babies))
 });
 
+// @route GET api/babies/get/baby/{name}/{parentId}
+// @desc get specific baby by their name and parent Id
+// @access Public
+router.get("/get/baby/:name/:parentId", (req, res) => {
+    Baby
+        .find({
+            name: req.params.name,
+            parentId: req.params.parentId
+        })
+        .then(babies => res.json(babies))
+});
+
 // @route UPDATE api/babies/update/{_id}
 // @desc update specific baby
 // @access Public
