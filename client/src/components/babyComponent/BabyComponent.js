@@ -49,8 +49,8 @@ class BabyComponent extends Component {
 
         const babies = this.state.babies && this.state.babies.map((babies) =>
             <div key={babies._id}>
-                <div style={{textAlign: 'center'}}>
-                    <h5>{babies.name} | {babies.age} months | {babies.weight} lbs</h5>
+                <div style={{textAlign: 'center'}} className="babies-text">
+                    <h6><strong>Name:</strong> {babies.name}</h6>
                 </div>
             </div>
         );
@@ -62,7 +62,7 @@ class BabyComponent extends Component {
   render() {
     return (
       <div className="BabyComponent-container">
-        <div className="tabs">
+        <Container maxWidth="sm">
             <Paper className="root">
                 <Tabs
                     value={this.state.value}
@@ -75,8 +75,6 @@ class BabyComponent extends Component {
                     <Tab label="Add New Baby" />
                 </Tabs>
             </Paper>
-        </div>
-        <Container maxWidth="sm">
             {this.state.value == 0 ? this.babiesList() : <BabyComponentForm/>}
         </Container>
       </div>

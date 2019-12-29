@@ -69,8 +69,8 @@ class AppointmentComponent extends Component {
     appointmentsList(){
         const appointments = this.state.appointments && this.state.appointments.map((appointments) =>
             <div key={appointments._id}>
-                <div style={{textAlign: 'center'}}>
-                    <h5> {appointments.babyName} | {appointments.date}</h5>
+                <div style={{textAlign: 'center'}} className="appointmentText">
+                    <p> <strong>Child:</strong> {appointments.babyName} | Date: {appointments.date}</p>
                 </div>
             </div>
         );
@@ -132,7 +132,6 @@ class AppointmentComponent extends Component {
                         value={this.state.name}
                         id="name"
                         type="text"
-                        style = {{width: 500, paddingBottom: 10}}
                     />
                     </div><div>
                     <TextField
@@ -140,7 +139,6 @@ class AppointmentComponent extends Component {
                         label="Birthday"
                         type="date"
                         onChange={this.onChange}
-                        style = {{width: 500, paddingBottom: 10}}
                         value={this.state.date}
                         InputLabelProps={{
                         shrink: true,
@@ -158,7 +156,7 @@ class AppointmentComponent extends Component {
     render() {
         return (
           <div className="AppointmentComponent-container">
-          <div className="tabs">
+          <Container maxWidth="sm">
             <Paper className="root">
                 <Tabs
                     value={this.state.value}
@@ -171,8 +169,7 @@ class AppointmentComponent extends Component {
                     <Tab label="New Appointment" />
                 </Tabs>
             </Paper>
-        </div>
-        <Container maxWidth="sm">
+        
             {this.state.value == 0 ? this.appointmentsList() : this.returnForm()}
         </Container>
           </div>

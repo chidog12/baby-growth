@@ -80,7 +80,6 @@ class BabyComponentForm extends Component {
                     value={this.state.name}
                     id="name"
                     type="text"
-                    style = {{width: 500, paddingBottom: 10}}
                 />
                 </div><div>
                 <TextField id="outlined-basic" variant="outlined" label="age in months" 
@@ -88,7 +87,6 @@ class BabyComponentForm extends Component {
                     value={this.state.age}
                     id="age"
                     type="number"
-                    style = {{width: 500, paddingBottom: 10}}
                 />
                 </div>
                 <div>
@@ -97,7 +95,6 @@ class BabyComponentForm extends Component {
                     value={this.state.weight}
                     id="weight"
                     type="number"
-                    style = {{width: 500, paddingBottom: 10}}
                 />
                 </div>
                 <Button type="submit" variant="contained" color="primary">

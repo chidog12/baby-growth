@@ -12,10 +12,12 @@ class Dashboard extends Component {
 
     return (
       <div className="dashboard">
-        <Container>
-          <BabyComponent/>
-          <AppointmentComponent/>
-          <DataComponent/>
+        <Container className="main">
+          <Container className="content" maxWidth="sm">
+            <BabyComponent/>
+            <AppointmentComponent/>
+            <DataComponent/>
+          </Container>
         </Container>
       </div>
     );
