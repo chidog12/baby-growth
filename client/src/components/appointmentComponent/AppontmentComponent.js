@@ -8,6 +8,7 @@ import Button from '@material-ui/core/Button';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Paper from '@material-ui/core/Paper';
+import "./AppointmentComponent.scss";
 
 
 class AppointmentComponent extends Component {
@@ -123,8 +124,7 @@ class AppointmentComponent extends Component {
 
     returnForm(){
         return(
-            <div>
-                <h3>Make and Appointment</h3>
+            <Container maxWidth="sm">
                 <form onSubmit={this.onSubmit}>
                     <div>
                     <TextField id="outlined-basic" variant="outlined"label="Baby Name" 
@@ -140,6 +140,7 @@ class AppointmentComponent extends Component {
                         label="Birthday"
                         type="date"
                         onChange={this.onChange}
+                        style = {{width: 500, paddingBottom: 10}}
                         value={this.state.date}
                         InputLabelProps={{
                         shrink: true,
@@ -150,7 +151,7 @@ class AppointmentComponent extends Component {
                         Done
                     </Button>
                 </form>
-            </div>
+            </Container>
         );
     }
 
@@ -167,7 +168,7 @@ class AppointmentComponent extends Component {
                     centered
                 >
                     <Tab label="Appointments" />
-                    <Tab label="New Appointments" />
+                    <Tab label="New Appointment" />
                 </Tabs>
             </Paper>
         </div>
