@@ -6,6 +6,8 @@ const passport = require("passport");
 const users = require("./routes/api/users");
 const appointments = require("./routes/api/appointments");
 const babies = require("./routes/api/babies");
+const path = require('path');
+const config = require('config');
 
 const app = express();
 
