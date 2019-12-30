@@ -107,4 +107,22 @@ router.post("/login", (req, res) => {
   });
 });
 
+// @route GET api/users/type/{ID}
+// @desc get type from parentID
+// @access Public
+router.get("/type/:parentId", (req, res) => {
+  User
+      .find({_id: req.params.parentId})
+      .then(user => res.json(user))
+});
+
+// @route GET api/users/type/{ID}
+// @desc get type from parentID
+// @access Public
+router.get("/", (req, res) => {
+  User
+      .find()
+      .then(user => res.json(user))
+});
+
 module.exports = router;

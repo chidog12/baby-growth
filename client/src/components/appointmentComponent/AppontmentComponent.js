@@ -124,7 +124,7 @@ class AppointmentComponent extends Component {
 
     returnForm(){
         return(
-            <Container maxWidth="sm">
+            <Container maxWidth="sm" className="form">
                 <form onSubmit={this.onSubmit}>
                     <div>
                     <TextField id="outlined-basic" variant="outlined"label="Baby Name" 
