@@ -3,6 +3,7 @@
   "version": "1.5.0",
   "description": "baby-growth",
   "main": "server.js",
+  "homepage": ".",
   "scripts": {
     "client-install": "npm install --prefix client",
     "start": "node server.js",
