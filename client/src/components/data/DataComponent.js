@@ -78,9 +78,9 @@ class DataComponent extends Component {
 
     render() {
         const rows = [
-            this.createData('Current Weight', this.state.weight),
+            this.createData('Current Weight', this.state.weight+ ' lbs'),
             this.createData('Recommended Diaper Size', calcCurrentDiaperSize(this.state.weight)),
-            this.createData('Estimated Next Month Weight', calcBabyWeightNextMonth(this.state.weight, this.state.age)),
+            this.createData('Estimated Next Month Weight', calcBabyWeightNextMonth(this.state.weight, this.state.age)+ ' lbs'),
             this.createData('Estimated Next Month Diaper Size', calcCurrentDiaperSize(calcBabyWeightNextMonth(this.state.weight, this.state.age)))
           ];
 
