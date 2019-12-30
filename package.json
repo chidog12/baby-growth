@@ -29,5 +29,11 @@
     "passport-jwt": "^4.0.0",
     "typeface-roboto": "0.0.75",
     "validator": "^10.9.0"
+  },
+  "engines": {
+    "node": "^12.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.2"
   }
 }
