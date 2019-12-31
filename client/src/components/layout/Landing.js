@@ -9,6 +9,7 @@ class Landing extends Component {
           <div className="col s12 center-align">
             <h4>
               <b>Baby Booty Size</b>
+              <img src="https://webstockreview.net/images/diaper-clipart-transparent-14.png" height="42" width="42"/>
             </h4>
             <br />
             <div className="col s6">
