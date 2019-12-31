@@ -7,6 +7,7 @@ import BabyComponent from "../babyComponent/BabyComponent";
 import AppointmentComponent from "../appointmentComponent/AppontmentComponent";
 import DataComponent from "../data/DataComponent";
 import ViewAppoinmentsComponent from "../proComponents/viewAppoinmentsComponent/ViewAppoinmentsComponent"
+import EditBabyComponent from "../proComponents/editBabyComponent/EditBabyComponent"
 import {Container} from "@material-ui/core";
 import axios from 'axios';
 
@@ -45,6 +46,7 @@ class Dashboard extends Component {
           <Container className="main">
             <Container className="content" maxWidth="md">
               <ViewAppoinmentsComponent/>
+              <EditBabyComponent/>
             </Container>
           </Container>
         </div>

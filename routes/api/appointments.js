@@ -50,14 +50,14 @@ router.get("/get/:parentId", (req, res) => {
 router.put("/update/:id", (req, res) => {
     
     Appointment
-        .findByIdAndUpdate(req.params.id, {
+        .update({babyId: req.params.id}, {
             parentId: req.body.parentId,
             babyId: req.body.babyId,
             babyName: req.body.babyName,
             date: req.body.date,
             done: req.body.done
         })
-        .then(babies => res.json(babies))
+        .then(appointment => res.json(appointment))
 });
 
 

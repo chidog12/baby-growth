@@ -13,6 +13,7 @@ import axios from 'axios';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import { makeStyles } from '@material-ui/core/styles';
+import "../viewAppoinmentsComponent/ViewAppoinmentsComponent.scss"
 
 
 class ViewAppoinmentsComponent extends Component {
@@ -106,7 +107,10 @@ class ViewAppoinmentsComponent extends Component {
 
         return(
             <div className="ViewAppoinmentsComponent-container">
-                <Container maxWidth="md">
+                <Container classname="container" maxWidth="md">
+                    <div className="title">
+                        <p><strong>Upcoming Appointments</strong></p>
+                    </div>
                     <TableContainer component={Paper}>
                         <Table aria-label="simple table">
                         <TableHead>

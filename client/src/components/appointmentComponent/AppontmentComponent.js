@@ -111,6 +111,7 @@ class AppointmentComponent extends Component {
                     })
                     .then(() => {
                         alert("Appointment Scheduled");
+                        window.location.reload();
                     })
                     .catch((err) => {
                         console.log(err)
