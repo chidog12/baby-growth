@@ -38,8 +38,6 @@ class ViewAppoinmentsComponent extends Component {
     getAppointments(){
         axios.get(`/api/appointments/get`)
         .then(res => {
-            console.log(res);
-            console.log(res.data);
             const appointments = res.data;
             this.setState({appointments});
         })
@@ -48,8 +46,6 @@ class ViewAppoinmentsComponent extends Component {
     getBabies(){
         axios.get(`/api/babies/get`)
         .then(res => {
-            console.log(res);
-            console.log(res.data);
             const babies = res.data;
             this.setState({babies});
         })
@@ -58,8 +54,6 @@ class ViewAppoinmentsComponent extends Component {
     getUsers(){
         axios.get(`/api/users`)
         .then(res => {
-            console.log(res);
-            console.log(res.data);
             const users = res.data;
             this.setState({users});
         })

@@ -45,7 +45,6 @@ class BabyComponent extends Component {
       }
 
     babiesList(){
-        console.log(this.state.babies)
 
         const babies = this.state.babies && this.state.babies.map((babies) =>
             <div key={babies._id}>

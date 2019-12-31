@@ -38,8 +38,6 @@ class Dashboard extends Component {
 
   render() {
 
-    console.log(this.state.type);
-
     if(this.state.type == "pro"){
       return(
         <div className="dashboard">

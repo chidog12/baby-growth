@@ -59,8 +59,6 @@ class AppointmentComponent extends Component {
     getAppointments(){
         axios.get(`/api/appointments/get/${this.state.parentId}`)
         .then(res => {
-            console.log(res);
-            console.log(res.data);
             const appointments = res.data;
             this.setState({appointments});
         })
@@ -84,8 +82,6 @@ class AppointmentComponent extends Component {
 
         axios.get(`/api/babies/get/baby/${this.state.name}/${this.state.parentId}`)
         .then(res => {
-            console.log(res);
-            console.log(res.data);
             let babyId = (res.data != '' ? res.data[0]._id : '');
             let name = (res.data != '' ? res.data[0].name : '');
             this.setState({
@@ -100,14 +96,11 @@ class AppointmentComponent extends Component {
                 date: this.state.date,
                 done: false
               };
-            console.log(newAppointment);
     
     
             if(this.checkValid()){
                 axios.post(`/api/appointments/post`,newAppointment)
                     .then(res => {
-                        console.log(res);
-                        console.log(res.data);
                     })
                     .then(() => {
                         alert("Appointment Scheduled");

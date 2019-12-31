@@ -52,13 +52,10 @@ class BabyComponentForm extends Component {
                 weight: this.state.weight,
                 parentId: this.state.parentId
               };
-            console.log(newBaby);
     
             if(this.checkValid()){
                 axios.post(`/api/babies/post`,newBaby)
                     .then(res => {
-                        console.log(res);
-                        console.log(res.data);
                     })
                     .then(() => {
                         alert("New baby submitted");

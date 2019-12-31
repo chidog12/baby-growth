@@ -31,8 +31,6 @@ class EditBabyComponent extends Component {
     getAppointments(){
         axios.get(`/api/appointments/get`)
         .then(res => {
-            console.log(res);
-            console.log(res.data);
             const appointments = res.data;
             this.setState({appointments});
         })
@@ -41,8 +39,6 @@ class EditBabyComponent extends Component {
       getBabies(){
         axios.get(`/api/babies/get`)
         .then(res => {
-            console.log(res);
-            console.log(res.data);
             const babies = res.data;
             this.setState({babies});
         })
@@ -73,13 +69,10 @@ class EditBabyComponent extends Component {
                 parentId: (this.state.babies.find(o => o._id === this.state.babyId) == undefined ? '' :
                 this.state.babies.find(o => o._id === this.state.babyId).parentId)
               };
-            console.log(newBaby);
     
             if(this.checkValid()){
                 axios.put(`/api/babies/update/${this.state.babyId}`,newBaby)
                     .then(res => {
-                        console.log(res);
-                        console.log(res.data);
                     })
                     .then(() => {
                         const updateAppt = {
@@ -93,12 +86,9 @@ class EditBabyComponent extends Component {
                             done: true
                           };
 
-                          console.log(updateAppt);
 
                         axios.put(`/api/appointments/update/${this.state.babyId}`,updateAppt)
                             .then(res => {
-                                console.log(res);
-                                console.log(res.data);
                             })
                     }).then(() => {
                         alert("Baby data updated");
