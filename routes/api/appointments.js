@@ -28,7 +28,7 @@ router.post("/post", (req, res) => {
 // @access Public
 router.get("/get", (req, res) => {
     Appointment
-        .find()
+        .find({done: false})
         .then(appointment => res.json(appointment))
 });
 

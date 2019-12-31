@@ -8,7 +8,7 @@ class Landing extends Component {
         <div className="row">
           <div className="col s12 center-align">
             <h4>
-              <b>Diaper Size</b> Web Application
+              <b>Baby Booty Size</b>
             </h4>
             <br />
             <div className="col s6">
