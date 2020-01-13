@@ -26,15 +26,32 @@ router.post("/register", (req, res) => {
   }
 
   User.findOne({ email: req.body.email }).then(user => {
+    let newUser = new User({
+      name: "",
+      email: "",
+      password: "",
+      type: ""
+    });
+
     if (user) {
       return res.status(400).json({ email: "Email already exists" });
     } else {
-      const newUser = new User({
-        name: req.body.name,
-        email: req.body.email,
-        password: req.body.password,
-        type: "parent"
-      });
+
+      if((req.body.email).includes("@kimberly-clark.com")){
+        newUser = new User({
+          name: req.body.name,
+          email: req.body.email,
+          password: req.body.password,
+          type: "pro"
+        });
+      } else {
+        newUser = new User({
+          name: req.body.name,
+          email: req.body.email,
+          password: req.body.password,
+          type: "parent"
+        });
+      }
 
       // Hash password before saving in database
       bcrypt.genSalt(10, (err, salt) => {
