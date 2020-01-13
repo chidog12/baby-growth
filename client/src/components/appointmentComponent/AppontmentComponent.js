@@ -38,8 +38,9 @@ class AppointmentComponent extends Component {
     };
 
     componentDidMount(){
-        this.setState({parentId: this.props.auth.user.id});
-        this.getAppointments();
+        this.setState({parentId: this.props.auth.user.id}, () => {
+            this.getAppointments();
+        });
       }
 
     checkValid(){
