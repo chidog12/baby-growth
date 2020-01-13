@@ -103,7 +103,7 @@ class EditBabyComponent extends Component {
           return(
             <Container classname="container" maxWidth="md">
                 <div className="title">
-                    <p><strong>Edit Baby Weight</strong></p>
+                    <p><strong>Edit Baby Info</strong></p>
                 </div>
                 <form onSubmit={this.onSubmit}>
                     <div>
