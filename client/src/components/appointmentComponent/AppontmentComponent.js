@@ -130,7 +130,7 @@ class AppointmentComponent extends Component {
                     </div><div>
                     <TextField
                         id="date"
-                        label="Birthday"
+                        label="date"
                         type="date"
                         onChange={this.onChange}
                         value={this.state.date}
